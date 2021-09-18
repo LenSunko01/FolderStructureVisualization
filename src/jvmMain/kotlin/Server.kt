@@ -24,8 +24,10 @@ fun createFolder(file : File) : Folder {
                 map[word] = currentOccurence + 1
             }
         }
-        val tempList = map.toList().sortedBy{(_, value) -> -value}.take(3)
-        map = tempList.toMap() as MutableMap<String, Int>
+        if (map.isNotEmpty()) {
+            val tempList = map.toList().sortedBy { (_, value) -> -value }.take(3)
+            map = tempList.toMap() as MutableMap<String, Int>
+        }
         return Folder(fileName, map, arrayListOf())
     }
     val children = file.listFiles()

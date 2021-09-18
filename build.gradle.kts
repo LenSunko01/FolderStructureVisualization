@@ -35,6 +35,7 @@ kotlin {
             dependencies {
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serializationVersion")
                 implementation("io.ktor:ktor-client-core:$ktorVersion")
+                implementation("org.jetbrains.kotlinx:kotlinx-cli:0.3.3")
             }
         }
         val commonTest by getting {
@@ -62,6 +63,8 @@ kotlin {
 
                 implementation("org.jetbrains.kotlin-wrappers:kotlin-react:$reactWrappersVersion")
                 implementation("org.jetbrains.kotlin-wrappers:kotlin-react-dom:$reactWrappersVersion")
+
+                implementation(npm("react-collapse", "5.1.0"))
             }
         }
     }

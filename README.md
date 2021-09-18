@@ -1,8 +1,12 @@
-[![official JetBrains project](https://jb.gg/badges/official.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
-[![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)
-
-# Full Stack JVM & JS App Hands-On Lab
-
-This repository is the code corresponding to the hands-on lab [Building a Full Stack Web App with Kotlin Multiplatform](https://play.kotlinlang.org/hands-on/Full%20Stack%20Web%20App%20with%20Kotlin%20Multiplatform/).
-
-**The master branch is to be used as a template. If you would like to see the completed project, check out the [final](https://github.com/kotlin-hands-on/jvm-js-fullstack/tree/final) branch.**
+# Folder structure visualization
+## Launch
+1. Clone the repository
+2. Run ./gradlew run from command line
+3. Wait until project compiles and starts running (this usually takes some time)
+## Usage
+1. Go to http://localhost:9090/
+2. Use form to insert directory path (e.g. /home/user/directory) and press enter
+3. You will see directory structure in the format:
+___|directory_name <word1:frequency> <word2:frequency> <word3:frequency>
+4. Buttons allow you to collapse or extend corresponding directory
+5. You can enter another directory path to see its structure

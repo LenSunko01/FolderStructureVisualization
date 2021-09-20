@@ -40,7 +40,10 @@ fun createFolder(file : File) : Folder {
             folder.words[key] = currentOccurence + value
         }
     }
-    folder.words.toList().sortedBy{(_, value) -> -value}.take(3).toMap()
+    if (folder.words.isNotEmpty()) {
+        val tempList = folder.words.toList().sortedBy { (_, value) -> -value }.take(3)
+        folder.words = tempList.toMap() as MutableMap<String, Int>
+    }
     return folder
 }
 
